@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Book Details</title>
+    <style>
+        /* Background */
+        body {
+            background: linear-gradient(135deg,#1e9df7, #3655ee, #e42279, #f0c70f);
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            animation: backgroundShift 10s ease infinite;
+        }
+
+        @keyframes backgroundShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Heading */
+        h1 {
+            color: #ffffff; /* Bright golden color */
+            text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.7), 0 0 15px #e7d073;
+            font-size: 3.5em;
+            margin-bottom: 30px;
+            animation: glow 2s ease-in-out infinite alternate;
+            text-align: center;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #000000, 0 0 20px #000000, 0 0 30px #000000;
+            }
+            to {
+                text-shadow: 0 0 20px #9a9868, 0 0 40px #9a9868, 0 0 50px #9a9868;
+            }
+        }
+
+        /* Form Styling */
+        form {
+            background: rgba(255, 255, 255, 0.2); /* Semi-transparent */
+            backdrop-filter: blur(25px);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.7);
+            width: 100%;
+            max-width: 600px;
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            transition: transform 0.4s, background-color 0.4s;
+        }
+
+        form:hover {
+            background-color: rgba(255, 255, 255, 0.25);
+            transform: translateY(-5px);
+        }
+
+        form:before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 100%;
+            top: 0;
+            left: -100%;
+            background: linear-gradient(45deg, rgba(112, 82, 82, 0.2), rgba(255,255,255,0.6), rgba(255,255,255,0.2));
+            z-index: 0;
+            transition: 1s;
+            transform: skewX(-45deg) translateX(0);
+            filter: blur(5px);
+        }
+
+        form:hover:before {
+            transform: skewX(-45deg) translateX(100%);
+        }
+
+        /* Table Layout */
+        table {
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+
+        th, td {
+            padding: 20px;
+            font-size: 1.2em;
+            position: relative;
+            z-index: 1;
+        }
+
+        th {
+            color: #000000;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Inputs */
+        input[type="text"], input[type="number"], select {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 3px solid #010101;
+            background-color: rgba(255, 255, 255, 0.25);
+            color: rgb(241, 213, 213)white;
+            font-size: 1.1em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+            transition: border-color 0.4s, background-color 0.4s;
+            backdrop-filter: blur(10px);
+            box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        input[type="text"]:focus, input[type="number"]:focus, select:focus {
+            border-color: #c9c78e;
+            background-color: rgba(255, 255, 255, 0.3);
+            outline: none;
+        }
+
+        /* Button Styling */
+        input[type="submit"] {
+            background: linear-gradient(45deg, #544f33, #e8e8e8);
+            color: black;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1.3em;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 25px;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        input[type="submit"]:hover {
+            background: linear-gradient(45deg, #ffffff, #504935);
+            box-shadow: 0 15px 45px rgba(25, 25, 25, 0.8);
+            transform: translateY(-5px);
+        }
+
+        /* Select dropdown */
+        select {
+            background-color: rgba(255, 255, 255, 0.15);
+            color: rgb(241, 213, rgb(241, 213, 213));
+            border: 3px solid #000000;
+            border-radius: 8px;
+            padding: 12px;
+            transition: 0.4s;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            form {
+                width: 95%;
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+   <div>
+       <h1>Update Book Details</h1>
+       <form action="/updateRecord" method="post">
+           <input type="hidden" name="editid" value="<%= data.id %>">
+           <table>
+               <tr>
+                   <th>Book Name:</th>
+                   <td><input type="text" name="name" value="<%= data.name %>" required></td>
+               </tr>
+
+               <tr>
+                   <th>Book Price:</th>
+                   <td><input type="number" name="price" value="<%= data.price %>" required></td>
+               </tr>
+
+               <tr>
+                   <th>Book Pages:</th>
+                   <td>
+                       <select name="pages" required>
+                           <option value="">--- Select Pages ---</option>
+                           <option value="200-400" <%= data.pages === '200-400' ? 'selected' : '' %>>200-400</option>
+                           <option value="400-600" <%= data.pages === '400-600' ? 'selected' : '' %>>400-600</option>
+                           <option value="600-800" <%= data.pages === '600-800' ? 'selected' : '' %>>600-800</option>
+                           <option value="800-1000" <%= data.pages === '800-1000' ? 'selected' : '' %>>800-1000</option>
+                       </select>
+                   </td>
+               </tr>
+
+               <tr>
+                   <th>Book Author:</th>
+                   <td><input type="text" name="author" value="<%= data.author %>" required></td>
+               </tr>
+
+               <tr>
+                   <td colspan="2"><input type="submit" value="Update Book"></td>
+               </tr>
+           </table>
+       </form>
+   </div>
+</body>
+</html>

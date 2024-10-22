@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Styling the body */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(90deg, #ff7e5f, #feb47b, #6a82fb, #fc5c7d, #36d1dc); 
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Styling the main container */
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+
+        /* Styling navigation links */
+        .nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 12px 20px;
+            border-radius: 8px;
+            background-color: #3498db;
+            color: white;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: #2980b9;
+            transform: translateY(-4px);
+        }
+
+        /* Styling the 404 link separately for emphasis */
+        .nav-links a.error-link {
+            background-color: #e74c3c;
+        }
+
+        .nav-links a.error-link:hover {
+            background-color: #c0392b;
+        }
+
+        /* Media queries for responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .nav-links a {
+                font-size: 1rem;
+                padding: 10px 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .nav-links a {
+                font-size: 0.9rem;
+                padding: 8px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Refrence err!!!</h1>
+        <div class="nav-links">
+            <a href="/">INDEX</a>
+            <a href="/contact">CONTACT</a>
+            <a href="/about">ABOUT</a>
+            <a href="/404" class="error-link">404</a>
+        </div>
+    </div>
+
+</body>
+</html>

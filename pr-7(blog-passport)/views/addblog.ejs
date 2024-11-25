@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Blog - Business Brokerage</title>
+    <link rel="icon" href="assets/frontend/img/favicon.png" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            font-family: "Poppins", sans-serif;
+        }
+
+        /* Header Section */
+        .header-section {
+            background: linear-gradient(135deg, #1976d2, #004ba0);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .header-section::before {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #ffc107;
+            border-radius: 10px;
+        }
+
+        .header-section h2 {
+            margin: 0;
+            font-size: 36px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Form Container */
+        .form-container {
+            background: white;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            padding: 50px;
+            margin: 50px auto;
+            max-width: 800px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .form-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .form-container::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            bottom: -10px;
+            left: -10px;
+            background: linear-gradient(135deg, #64b5f6, #1e88e5);
+            z-index: -1;
+            border-radius: 15px;
+            filter: blur(6px);
+        }
+
+        .form-container h3 {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            color: #1976d2;
+            margin-bottom: 30px;
+        }
+
+        /* Input Fields */
+        .form-container input,
+        .form-container textarea {
+            border: 1px solid #1976d2;
+            border-radius: 10px;
+            padding: 15px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container input:focus,
+        .form-container textarea:focus {
+            border-color: #ffc107;
+            box-shadow: 0px 0px 8px rgba(255, 193, 7, 0.6);
+            outline: none;
+        }
+
+        .form-container textarea {
+            resize: none;
+        }
+
+        /* Submit Button */
+        .form-container .btn-submit {
+            background: linear-gradient(135deg, #ffc107, #f57f17);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 50px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .form-container .btn-submit:hover {
+            background: linear-gradient(135deg, #f57f17, #ffc107);
+            transform: translateY(-3px);
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* View Blogs Link */
+        .view-blog-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .view-blog-link a {
+            color: #e53935;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .view-blog-link a:hover {
+            color: #b71c1c;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: #004ba0;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 14px;
+            box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header-section">
+        <h2><i class="fas fa-feather-alt"></i> Add Your Blog</h2>
+    </header>
+
+    <!-- Form Section -->
+    <div class="container">
+        <div class="form-container">
+            <h3>Blog Details</h3>
+            <form action="/addblog" method="POST" enctype="multipart/form-data">
+                <div class="mb-4">
+                    <label for="title" class="form-label">Blog Title</label>
+                    <input type="text" id="title" name="title" class="form-control" placeholder="Enter blog title" required>
+                </div>
+                <div class="mb-4">
+                    <label for="desc" class="form-label">Blog Description</label>
+                    <textarea id="desc" name="desc" class="form-control" placeholder="Enter blog description" rows="5" required></textarea>
+                </div>
+                <div class="mb-4">
+                    <label for="image" class="form-label">Blog Image</label>
+                    <input type="file" id="image" name="image" class="form-control" accept="image/*" required>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-submit"><i class="fas fa-plus"></i> Add Blog</button>
+                </div>
+            </form>
+            <div class="view-blog-link">
+                <a href="/viewblog"><i class="fas fa-eye"></i> View Blogs</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Business Brokerage. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

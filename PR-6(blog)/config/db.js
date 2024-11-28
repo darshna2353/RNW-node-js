@@ -9,7 +9,6 @@ database.on("connected",(err)=>{
     if (err) {
         console.log(err);
         return false
-        
     }
 
     console.log("db is connected");

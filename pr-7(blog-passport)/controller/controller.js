@@ -24,14 +24,6 @@ const Resiterusers = async (req, res) => {
 
 const loginuseres = async (req, res) => {
     try {
-        const { email, password } = req.body;
-        const user = await usermodels.findOne({ email: email })
-        console.log(user);
-
-        if (!user || user.password !== password) {
-            console.log(`Email and Password not valid`);
-            return res.redirect('/')
-        }
         return res.redirect('/viewblog')
     } catch (error) {
         console.log(error);

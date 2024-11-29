@@ -4,7 +4,7 @@ const routes = express.Router();
 
 const passport = require('passport');
 
-const { loginpage, resiterpage, Resiterusers, loginuseres, dashbord,  addblogpage, addblogusers, viewblog, deleterecord, editrecord, upblog, logout } = require('../controller/controller');
+const { loginpage, resiterpage, Resiterusers, loginuseres,   addblogpage, addblogusers, viewblog, deleterecord, editrecord, upblog, logout } = require('../controller/controller');
 
 const multer=require('multer')
 
@@ -23,13 +23,13 @@ const storage = multer.diskStorage({
 routes.get('/', loginpage);
 routes.get('/register',resiterpage); 
 routes.post('/insert',Resiterusers)
-routes.post('/login',passport.authenticate('local', { failureRedirect: '/' }),loginuseres)
+// routes.post('/login',passport.authenticate('local', { failureRedirect: '/' }),loginuseres)
 routes.get('/addblogpage',addblogpage); 
 routes.post('/addblog',upload,addblogusers)
 routes.get('/viewblog',passport.checkUser,viewblog); 
 routes.get('/delete',deleterecord); 
 routes.get('/edit',editrecord); 
-routes.post('/up',upload,upblog)
+routes.post('/up',upload,upblog) 
 routes.get('/logout', logout)
 
 module.exports = routes;

@@ -8,6 +8,7 @@ const { loginpage, resiterpage, Resiterusers, loginuseres,   addblogpage, addblo
 
 const multer=require('multer')
 
+
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null, 'uploads')
@@ -17,6 +18,7 @@ const storage = multer.diskStorage({
       cb(null, file.fieldname + '-' + uniqueSuffix)
     }
   })
+  
   
   const upload = multer({ storage: storage }).single('image')
 

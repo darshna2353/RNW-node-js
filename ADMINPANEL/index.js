@@ -1,6 +1,6 @@
 const express = require('express');
 
-const port = 8080;
+const port = 9000;
 
 const app = express();
 
@@ -30,7 +30,7 @@ app.use(passport.initialize());
 app.use(passport.setUser);
 app.use(express.urlencoded());
 
-app.use('/',require('./routes/indexRoutes'));
+app.use('/',require('./routes/indexRoute'));
 
 app.listen(port,(err)=>{
     if(err){

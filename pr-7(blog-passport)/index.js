@@ -12,6 +12,7 @@ const passport = require('passport');
 const passportlocal = require('./config/passportlocal');
 const session = require('express-session');
 
+
 app.use(session({
     secret: 'darshna',
     resave: false,
@@ -20,6 +21,7 @@ app.use(session({
         maxAge: 1000 * 60 * 60 * 24
     }
 }))
+
 
 app.use(passport.initialize());
 app.use(passport.session());

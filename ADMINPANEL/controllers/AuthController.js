@@ -57,13 +57,13 @@ const forgotPassword = async(req,res) => {
     var transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-          user: 'rwn3developer11@gmail.com',
-          pass: 'izuk vsxd bntu pihu'
+          user: 'darshnagoyani13@gmail.com',
+          pass: 'fyyv mags idfn dpwz'
         }
       });
       
       var mailOptions = {
-        from: 'rwn3developer11@gmail.com',
+        from: 'darshnagoyani13@gmail.com',
         to: useremail,
         subject: 'Sending Email using Node.js',
         html: `

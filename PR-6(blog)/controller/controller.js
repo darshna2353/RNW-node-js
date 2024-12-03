@@ -6,12 +6,8 @@ const resiterpage = (req, res) => {
 
 }
 const loginpage = (req, res) => {
-    if(req.cookies.auth){
-        return res.redirect('/addblogpage')
-    }
     return res.render('login')
 }
-
 // const dashbord = async (req, res) => {
 
 //     try {
@@ -51,7 +47,7 @@ console.log(user);
             console.log(`Email and Password not valid`);
             return res.redirect('/')
         }
-        res.cookie('auth',user)
+
         return res.redirect('/viewblog')
     } catch (error) {
         console.log(error);
@@ -91,9 +87,6 @@ await blogmodels.create({
 const viewblog= async (req, res)=>{
 try {
     
-    if(!req.cookies.auth){
-        return res.redirect('/')
-    }
 
     let users=await blogmodels.find({})
     return res.render('viewblog',{

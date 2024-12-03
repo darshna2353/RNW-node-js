@@ -1,210 +1,394 @@
 <!doctype html>
-<html lang="en">
+<html class="no-js" lang="zxx">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Blog</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <style>
-        /* Global Styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            background: linear-gradient(120deg, #f8f9fa, #e9ecef);
-            scroll-behavior: smooth;
-        }
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+   <title>Business Brokerage</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        header {
-            background: linear-gradient(120deg, rgba(51, 51, 51, 0.9), rgba(68, 68, 68, 0.9));
-            color: #fff;
-            padding: 20px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            transition: background 0.3s ease;
-        }
-
-        header.scrolled {
-            background: rgba(51, 51, 51, 1);
-        }
-
-        header a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        header .navbar-nav .nav-link:hover {
-            color: #00aaff;
-        }
-
-        .hero {
-            background: url('https://via.placeholder.com/1920x500') no-repeat center center/cover;
-            color: #fff;
-            height: 60vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            animation: fadeInDown 2s ease-out;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-top: 10px;
-            animation: fadeInUp 2s ease-out;
-        }
-
-        /* Blog Card */
-        .blog-card {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            border-radius: 15px;
-            overflow: hidden;
-        }
-
-        .blog-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-        }
-
-        .blog-card img {
-            border-bottom: 2px solid #00aaff;
-        }
-
-        .blog-card .card-body {
-            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-            padding: 20px;
-        }
-
-        .blog-card .btn-primary {
-            background: linear-gradient(120deg, #007bff, #0056b3);
-            border: none;
-            transition: background 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .blog-card .btn-primary:hover {
-            background: linear-gradient(120deg, #0056b3, #003f87);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Footer */
-        footer {
-            background: #333;
-            color: #fff;
-            padding: 20px 0;
-            margin-top: 50px;
-            position: relative;
-        }
-
-        footer a {
-            color: #00aaff;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        footer a:hover {
-            color: #0056b3;
-            text-decoration: underline;
-        }
-
-        .back-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: linear-gradient(120deg, #007bff, #0056b3);
-            color: #fff;
-            border: none;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        }
-
-        .back-to-top:hover {
-            background: linear-gradient(120deg, #0056b3, #003f87);
-        }
-
-        /* Animations */
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/frontend/img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+    
+  <!-- CSS here -->
+  <link rel="stylesheet" href="assets/frontend/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/frontend/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="assets/frontend/css/slicknav.css">
+  <link rel="stylesheet" href="assets/frontend/css/animate.min.css">
+  <link rel="stylesheet" href="assets/frontend/css/magnific-popup.css">
+  <link rel="stylesheet" href="assets/frontend/css/fontawesome-all.min.css">
+  <link rel="stylesheet" href="assets/frontend/css/themify-icons.css">
+  <link rel="stylesheet" href="assets/frontend/css/themify-icons.css">
+  <link rel="stylesheet" href="assets/frontend/css/slick.css">
+  <link rel="stylesheet" href="assets/frontend/css/nice-select.css">
+  <link rel="stylesheet" href="assets/frontend/css/style.css">
+  <link rel="stylesheet" href="assets/frontend/css/responsive.css">
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark container">
-            <a class="navbar-brand" href="#">ModernBlog</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-                </ul>
+    
+    <!-- Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="assets/frontend/img/logo/logo.png" alt="">
+                </div>
             </div>
-        </nav>
+        </div>
+    </div>
+    <!-- Preloader Start-->
+
+    <header>
+        <!-- Header Start -->
+       <div class="header-area">
+            <div class="main-header ">
+                <div class="header-top top-bg d-none d-lg-block">
+                   <div class="container-fluid">
+                       <div class="col-xl-12">
+                            <div class="row d-flex justify-content-between align-items-center">
+                                <div class="header-info-left">
+                                    <ul>
+                                        <li><i class="fas fa-envelope"></i>info@xgo.com</li>
+                                    </ul>
+                                </div>
+                                <div class="header-info-right">
+                                    <ul class="header-social">    
+                                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                       <li> <a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                       </div>
+                   </div>
+                </div>
+               <div class="header-bottom  header-sticky">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <!-- Logo -->
+                            <div class="col-xl-2 col-lg-1 col-md-1">
+                                <div class="logo">
+                                  <a href="index.html"><img src="assets/frontend/img/logo/logo.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-xl-8 col-lg-8 col-md-8">
+                                <!-- Main-menu -->
+                                <div class="main-menu f-right d-none d-lg-block">
+                                    <nav> 
+                                        <ul id="navigation">
+                                            <li><a href="/addblogpage">add</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>             
+                            <div class="col-xl-2 col-lg-3 col-md-3">
+                                <div class="header-right-btn f-right d-none d-lg-block">
+                                    <a href="#" class="btn header-btn">Contact Now</a>
+                                </div>
+                            </div>
+                            <!-- Mobile Menu -->
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+            </div>
+       </div>
+        <!-- Header End -->
     </header>
 
-    <!-- Hero Section -->
-    <div class="hero">
-        <h1>Welcome to Our Blog</h1>
-        <p>Stay updated with the latest trends and insights</p>
+        <!-- slider Area Start-->
+     <div class="slider-area ">
+        <!-- Mobile Menu -->
+        <div class="single-slider slider-height2 d-flex align-items-center" data-background="assets/frontend/img/hero/Industries_hero.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="hero-cap text-center">
+                            <h2>Our Blog</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- slider Area End-->
 
-    <!-- Blog Section -->
-    <section class="container py-5">
-        <div class="row">
-            <div class="col-md-4">
-                <!-- Example Blog Card -->
+    <!--================Blog Area =================-->
+    <section class="blog_area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mb-5 mb-lg-0">
+                    <div class="blog_left_sidebar">
+                        <article class="blog_item">
+                            <div class="blog_item_img">
+                                <img class="card-img rounded-0" src="/public/" alt="">
+                                <a href="#" class="blog_item_date">
+                                    <h3>15</h3>
+                                    <p>Jan</p>
+                                </a>
+                            </div>
+
+                            <div class="blog_details">
+                                <a class="d-inline-block" href="single-blog.html">
+                                    <h2>Google inks pact for new 35-storey office</h2>
+                                </a>
+                                <p>That dominion stars lights dominion divide years for fourth have don't stars is that
+                                    he earth it first without heaven in place seed it second morning saying.</p>
+                                <ul class="blog-info-link">
+                                    <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
+                                    <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <article class="blog_item">
+                            <div class="blog_item_img">
+                                <img class="card-img rounded-0" src="assets/frontend/img/blog/single_blog_2.png" alt="">
+                                <a href="#" class="blog_item_date">
+                                    <h3>15</h3>
+                                    <p>Jan</p>
+                                </a>
+                            </div>
+
+                            <div class="blog_details">
+                                <a class="d-inline-block" href="single-blog.html">
+                                    <h2>Google inks pact for new 35-storey office</h2>
+                                </a>
+                                <p>That dominion stars lights dominion divide years for fourth have don't stars is that
+                                    he earth it first without heaven in place seed it second morning saying.</p>
+                                <ul class="blog-info-link">
+                                    <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
+                                    <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <article class="blog_item">
+                            <div class="blog_item_img">
+                                <img class="card-img rounded-0" src="assets/frontend/img/blog/single_blog_3.png" alt="">
+                                <a href="#" class="blog_item_date">
+                                    <h3>15</h3>
+                                    <p>Jan</p>
+                                </a>
+                            </div>
+
+                            <div class="blog_details">
+                                <a class="d-inline-block" href="single-blog.html">
+                                    <h2>Google inks pact for new 35-storey office</h2>
+                                </a>
+                                <p>That dominion stars lights dominion divide years for fourth have don't stars is that
+                                    he earth it first without heaven in place seed it second morning saying.</p>
+                                <ul class="blog-info-link">
+                                    <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
+                                    <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <article class="blog_item">
+                            <div class="blog_item_img">
+                                <img class="card-img rounded-0" src="assets/frontend/img/blog/single_blog_4.png" alt="">
+                                <a href="#" class="blog_item_date">
+                                    <h3>15</h3>
+                                    <p>Jan</p>
+                                </a>
+                            </div>
+
+                            <div class="blog_details">
+                                <a class="d-inline-block" href="single-blog.html">
+                                    <h2>Google inks pact for new 35-storey office</h2>
+                                </a>
+                                <p>That dominion stars lights dominion divide years for fourth have don't stars is that
+                                    he earth it first without heaven in place seed it second morning saying.</p>
+                                <ul class="blog-info-link">
+                                    <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
+                                    <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <article class="blog_item">
+                            <div class="blog_item_img">
+                                <img class="card-img rounded-0" src="assets/frontend/img/blog/single_blog_5.png" alt="">
+                                <a href="#" class="blog_item_date">
+                                    <h3>15</h3>
+                                    <p>Jan</p>
+                                </a>
+                            </div>
+
+                            <div class="blog_details">
+                                <a class="d-inline-block" href="single-blog.html">
+                                    <h2>Google inks pact for new 35-storey office</h2>
+                                </a>
+                                <p>That dominion stars lights dominion divide years for fourth have don't stars is that
+                                    he earth it first without heaven in place seed it second morning saying.</p>
+                                <ul class="blog-info-link">
+                                    <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
+                                    <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <nav class="blog-pagination justify-content-center d-flex">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a href="#" class="page-link" aria-label="Previous">
+                                        <i class="ti-angle-left"></i>
+                                    </a>
+                                </li>
+                                <li class="page-item">
+                                    <a href="#" class="page-link">1</a>
+                                </li>
+                                <li class="page-item active">
+                                    <a href="#" class="page-link">2</a>
+                                </li>
+                                <li class="page-item">
+                                    <a href="#" class="page-link" aria-label="Next">
+                                        <i class="ti-angle-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </section>
-
-    <!-- Back to Top Button -->
-    <button class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+    <!--================Blog Area =================-->
 
     <footer>
-        <p>&copy; ModernBlog</p>
+        <!-- Footer Start-->
+        <div class="footer-area footer-padding">
+            <div class="container">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                       <div class="single-footer-caption mb-50">
+                         <div class="single-footer-caption mb-30">
+                              <!-- logo -->
+                             <div class="footer-logo">
+                                 <a href="index.html"><img src="assets/frontend/img/logo/logo2_footer.png" alt=""></a>
+                             </div>
+                             <div class="footer-tittle">
+                                 <div class="footer-pera">
+                                     <p>Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod</p>
+                                </div>
+                             </div>
+                             <!-- social -->
+                             <div class="footer-social">
+                                 <a href="#"><i class="fab fa-facebook-square"></i></a>
+                                 <a href="#"><i class="fab fa-twitter-square"></i></a>
+                                 <a href="#"><i class="fab fa-linkedin"></i></a>
+                                 <a href="#"><i class="fab fa-pinterest-square"></i></a>
+                             </div>
+                         </div>
+                       </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-5">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>Company</h4>
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="single-blog.html">Services</a></li>
+                                    <li><a href="#">Cases</a></li>
+                                    <li><a href="contact.html">  Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-7">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>Services</h4>
+                                <ul>
+                                    <li><a href="#">Commercial Cleaning</a></li>
+                                    <li><a href="#">Office Cleaning</a></li>
+                                    <li><a href="#">Building Cleaning</a></li>
+                                    <li><a href="#">Floor Cleaning</a></li>
+                                    <li><a href="#">Apartment Cleaning</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>Get in Touch</h4>
+                                <ul>
+                                 <li><a href="#">152-515-6565</a></li>
+                                 <li><a href="#"> Demomail@gmail.com</a></li>
+                                 <li><a href="#">New Orleans, USA</a></li>
+                             </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer-bottom aera -->
+        <div class="footer-bottom-area footer-bg">
+            <div class="container">
+                <div class="footer-border">
+                     <div class="row d-flex align-items-center">
+                         <div class="col-xl-12 ">
+                             <div class="footer-copy-right text-center">
+                                <p>
+                                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserve
+                                </p>
+                             </div>
+                         </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End-->
     </footer>
-</body>
 
+<!-- JS here -->
+	
+		<!-- All JS Custom Plugins Link Here here -->
+        <script src="./assets/frontend/js/vendor/modernizr-3.5.0.min.js"></script>
+		
+		<!-- Jquery, Popper, Bootstrap -->
+		<script src="./assets/frontend/js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="./assets/frontend/js/popper.min.js"></script>
+        <script src="./assets/frontend/js/bootstrap.min.js"></script>
+	    <!-- Jquery Mobile Menu -->
+        <script src="./assets/frontend/js/jquery.slicknav.min.js"></script>
+
+		<!-- Jquery Slick , Owl-Carousel Plugins -->
+        <script src="./assets/frontend/js/owl.carousel.min.js"></script>
+        <script src="./assets/frontend/js/slick.min.js"></script>
+
+		<!-- One Page, Animated-HeadLin -->
+        <script src="./assets/frontend/js/wow.min.js"></script>
+		<script src="./assets/frontend/js/animated.headline.js"></script>
+		
+		<!-- Scrollup, nice-select, sticky -->
+        <script src="./assets/frontend/js/jquery.scrollUp.min.js"></script>
+        <script src="./assets/frontend/js/jquery.nice-select.min.js"></script>
+		<script src="./assets/frontend/js/jquery.sticky.js"></script>
+        <script src="./assets/frontend/js/jquery.magnific-popup.js"></script>
+
+        <!-- contact js -->
+        <script src="./assets/frontend/js/contact.js"></script>
+        <script src="./assets/frontend/js/jquery.form.js"></script>
+        <script src="./assets/frontend/js/jquery.validate.min.js"></script>
+        <script src="./assets/frontend/js/mail-script.js"></script>
+        <script src="./assets/frontend/js/jquery.ajaxchimp.min.js"></script>
+        
+		<!-- Jquery Plugins, main Jquery -->	
+        <script src="./assets/frontend/js/plugins.js"></script>
+        <script src="./assets/frontend/js/main.js"></script>
+
+</body>
 </html>

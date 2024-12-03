@@ -1,160 +1,131 @@
 <!DOCTYPE html>
+<!-- 
+Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
+Version: 3.3.0
+Author: KeenThemes
+Website: http://www.keenthemes.com/
+Contact: support@keenthemes.com
+Follow: www.twitter.com/keenthemes
+Like: www.facebook.com/keenthemes
+Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
+License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
+-->
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
 <html lang="en">
-
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
-    <style>
-        body {
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            font-family: 'Arial', sans-serif;
-            color: #fff;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .login-container {
-            width: 400px;
-            background: #ffffff;
-            color: #333;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-            animation: fadeIn 1s ease-out;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .login-container h3 {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #1e3c72;
-        }
-
-        .form-control {
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            padding: 12px;
-            font-size: 16px;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-control:focus {
-            border-color: #1e3c72;
-            box-shadow: 0 0 10px rgba(30, 60, 114, 0.2);
-        }
-
-        .btn-primary {
-            background: linear-gradient(90deg, #1e3c72, #2a5298);
-            border: none;
-            border-radius: 8px;
-            padding: 12px;
-            font-size: 16px;
-            font-weight: bold;
-            color: #fff;
-            cursor: pointer;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .btn-primary:hover {
-            background: linear-gradient(90deg, #2a5298, #1e3c72);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 15px rgba(30, 60, 114, 0.3);
-        }
-
-        .form-footer {
-            text-align: center;
-            margin-top: 15px;
-            font-size: 14px;
-            color: #666;
-        }
-
-        .form-footer a {
-            color: #1e3c72;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .form-footer a:hover {
-            text-decoration: underline;
-        }
-
-        .alert {
-            font-size: 14px;
-            margin-bottom: 20px;
-            padding: 10px;
-            background: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-            border-radius: 5px;
-        }
-    </style>
+<meta charset="utf-8"/>
+<title>Metronic | Login Form 1</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta content="" name="description"/>
+<meta content="" name="author"/>
+<!-- BEGIN GLOBAL MANDATORY STYLES -->
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
+<link href="../assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+<link href="../assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<link href="../assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+<!-- END GLOBAL MANDATORY STYLES -->
+<!-- BEGIN PAGE LEVEL STYLES -->
+<link href="../assets/admin/pages/css/login.css" rel="stylesheet" type="text/css"/>
+<!-- END PAGE LEVEL SCRIPTS -->
+<!-- BEGIN THEME STYLES -->
+<link href="../assets/global/css/components-rounded.css" id="style_components" rel="stylesheet" type="text/css"/>
+<link href="../assets/global/css/plugins.css" rel="stylesheet" type="text/css"/>
+<link href="../assets/admin/layout/css/layout.css" rel="stylesheet" type="text/css"/>
+<link href="../assets/admin/layout/css/themes/default.css" rel="stylesheet" type="text/css" id="style_color"/>
+<link href="../assets/admin/layout/css/custom.css" rel="stylesheet" type="text/css"/>
+<!-- END THEME STYLES -->
+<link rel="shortcut icon" href="favicon.ico"/>
 </head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<body class="login">
+<!-- BEGIN LOGIN -->
+<div class="content">
+	<!-- BEGIN LOGIN FORM -->
+	<h3 class="form-title">Login In</h3>
+	<div class="alert alert-danger display-hide">
+		<button class="close" data-close="alert"></button>
+		<span></span>
+	</div>
 
-<body>
-    <div class="login-container">
-        <h3>Welcome Back</h3>
-        <form action="/login" method="post">
-            <!-- Error Alert -->
-            
-
-            <!-- Email -->
-            <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
-            </div>
-
-            <!-- Password -->
-            <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password" required>
-            </div>
-
-            <!-- Submit Button -->
-            <div class="text-center">
-                <button type="submit" class="btn btn-primary w-100">Login</button>
-            </div>
-        </form>
-
-        <!-- Footer Links -->
-        <div class="form-footer mt-3">
-            <p>Don't have an account? <a href="/register">Sign Up</a></p>
-        </div>
+    <form action="/login" method="post">
+    <div class="form-group">
+        <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+        <label class="control-label visible-ie8 visible-ie9">email</label>
+        <input class="form-control form-control-solid placeholder-no-fix" type="text" autocomplete="off"  placeholder="Email" name="email"  />
     </div>
+    <div class="form-group">
+        <label class="control-label visible-ie8 visible-ie9">Password</label>
+        <input class="form-control form-control-solid placeholder-no-fix" type="password" autocomplete="off" placeholder="Password"  name="password" />
+    </div>
+	<div class="form-actions text-center">
+		<button type="submit" class="btn btn-success uppercase" id="login">Login</button>
+        <a href="/register" type="button" class="btn btn-success uppercase" >Sign UP</a>
+	</div>
+</form>
+	<!-- END LOGIN FORM -->
+</div>
+<div class="copyright">
+	 Copyrigt &copy;2020 All Rights Reserved.
+</div>
+<!-- END LOGIN -->
+<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+<!-- BEGIN CORE PLUGINS -->
+<!--[if lt IE 9]>
+<script src="../assets/global/plugins/respond.min.js"></script>
+<script src="../assets/global/plugins/excanvas.min.js"></script> 
+<![endif]-->
+<script src="../assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+<script src="../assets/global/plugins/jquery-migrate.min.js" type="text/javascript"></script>
+<script src="../assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="../assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+<script src="../assets/global/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
+<script src="../assets/global/plugins/jquery.cokie.min.js" type="text/javascript"></script>
+<!-- END CORE PLUGINS -->
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+<script src="../assets/global/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
+<!-- END PAGE LEVEL PLUGINS -->
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+<script src="../assets/global/scripts/metronic.js" type="text/javascript"></script>
+<script src="../assets/admin/layout/scripts/layout.js" type="text/javascript"></script>
+<!-- END PAGE LEVEL SCRIPTS -->
+<!-- <script>
+localStorage.removeItem('login');
 
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <!-- <script>
-        // Example error handling logic
-        document.querySelector("form").addEventListener("submit", function (event) {
-            const email = document.getElementById("email").value;
-            const password = document.getElementById("password").value;
+jQuery(document).ready(function() {
+	Metronic.init();
+	Layout.init();
 
-            if (email !== "user@example.com" || password !== "password123") {
-                event.preventDefault();
-                const alert = document.getElementById("error-alert");
-                alert.classList.remove("d-none");
-                alert.textContent = "Invalid email or password.";
-            }
-        });
-    </script> -->
+	$('#username, #password').on('keyup', function(e) {
+		if (e.keyCode == 13) {
+			$('#login').click();
+		}
+	});
+
+	$('#login').click(function() {
+		if ($('#username').val() == '' || $('#password').val() == '') {
+			$('.alert-danger span').text('Enter any username and password.');
+			$('.alert-danger').removeClass('display-hide');
+		} else {
+			if ($('#username').val() == 'admin' && $('#password').val() == 'pass123') {
+				localStorage.setItem('login', true);
+				window.location.href = 'index.html';
+			} else {
+				$('.alert-danger span').text('Enter correct username and password.');
+				$('.alert-danger').removeClass('display-hide');
+			}
+		}
+	});
+});
+</script> -->
+<!-- END JAVASCRIPTS -->
 </body>
-
-</html> 
+<!-- END BODY -->
+</html>

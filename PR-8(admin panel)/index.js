@@ -1,9 +1,7 @@
 const express = require('express');
 
-const port = 9090;
+const port = 8000;
 
-
-//mahadev
 const app = express();
 
 app.set('view engine','ejs')
@@ -24,7 +22,7 @@ const passport = require('passport');
 const passportLocal = require('./config/passportLocal');
 const session = require('express-session');
 app.use(session({
-    secret:'radhekrishna',
+    secret:'radhey',
     resave : true,
     saveUninitialized:true,
     cookie:{

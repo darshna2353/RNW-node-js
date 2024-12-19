@@ -68,20 +68,20 @@
                                                     <%= cat.category_name %>
                                                 </td>
                                                 <td>
-                                                    <a href=" /category/deleteCategory?id=<%=cat.id %>"
+                                                    <a href=" /category/deleteCategory?id=<%=cat?.id %>"
                                                         class="btn btn-danger btn-sm">
                                                         <i class="fa fa-trash"></i>
                                                     </a>
-                                                    <a href=" /category/edit?id=<%=cat.id %>"
+                                                    <a href=" /category/edit?id=<%=cat?.id %>"
                                                         class="btn btn-primary btn-sm">
                                                         <i class="fa fa-edit"></i>
                                                     </a>
                                                 </td>
                                                 <td>
                                                     <% if (cat.status == "active") {%>
-                                                        <a href="/category/changestatus?id=<%= cat.id %>&status=<%= cat.status %>" class="btn btn-success"><%= cat.status %></a>
+                                                        <a href="/category/changestatus?id=<%= cat?.id %>&status=<%= cat?.status %>" class="btn btn-success"><%= cat.status %></a>
                                                    <% } else { %>
-                                                    <a href="/category/changestatus?id=<%= cat.id %>&status=<%= cat.status %>" class="btn btn-warning text-dark"><%= cat.status %></a>
+                                                    <a href="/category/changestatus?id=<%= cat?.id %>&status=<%= cat?.status %>" class="btn btn-warning text-dark"><%= cat.status %></a>
 
                                                    <% } %>
                                                 </td>

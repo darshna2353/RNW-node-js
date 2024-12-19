@@ -67,18 +67,18 @@
                                                 <td><%= exsubcat.subcategoryId.subcategory %></td>
                                                 <td><%= exsubcat.exsubcategory %></td>
                                                 <td>
-                                                    <a href=" /exsubcategory/deleteexsubcategory?id=<%=exsubcat.id %>"
+                                                    <a href=" /exsubcategory/deleteexsubcategory?id=<%=exsubcat?.id %>"
                                                         class="btn btn-danger btn-sm">
                                                         <i class="fa fa-trash"></i>
                                                     </a>
-                                                    <a href=" /exsubcategory/editexsubcategory?id=<%=exsubcat.id %>"
+                                                    <a href=" /exsubcategory/editexsubcategory?id=<%=exsubcat?.id %>"
                                                         class="btn btn-primary btn-sm">
                                                         <i class="fa fa-edit"></i>
                                                     </a>
                                                 </td>
                                                 <td>
-                                                    <a href="/exsubcategory/changeStatus?status=<%= exsubcat.status %>&id=<%= exsubcat.id %>"
-                                                        class="<% if(exsubcat.status == `active`) { %> btn
+                                                    <a href="/exsubcategory/changeStatus?status=<%= exsubcat?.status %>&id=<%= exsubcat.?id %>"
+                                                        class="<% if(exsubcat?.status == `active`) { %> btn
                                                 btn-success <% } else { %> btn btn-danger <% } %>">
                                                         <%= exsubcat.status %>
                                                     </a>

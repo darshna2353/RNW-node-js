@@ -125,7 +125,6 @@ const logout = (req, res) => {
     });
 }
 
-
 module.exports = {
     resiterpage, loginpage, Resiterusers, loginuseres,
     addblogpage, addblogusers, viewblog, deleterecord, editrecord, upblog, logout
